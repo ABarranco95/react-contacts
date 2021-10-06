@@ -13,8 +13,29 @@ code {
 }
 
 .card-container {
-  width: 13px;
+  width: 50%;
   padding: 1em 1em;
   margin: 2.5em 0;
-  box-shadow: 1px 3.5px 11px grey;
+  box-shadow: 1px 3.5px 11px rgb(185, 184, 184);
+}
+
+.button-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  height: 1.em;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: rgb(172, 170, 170);
+  font-weight: 900;
+  text-align: center;
+  position: center;
+}
+
+.image-col {
+  border-right: 1px solid rgb(199, 197, 197);
 }
