@@ -1,10 +1,12 @@
+import { Container, Row, Image } from 'react-bootstrap'
+
 const  ContactDetailsCard = ({ contact }) => {
     return (
-        <div>
-            <div>
-                <img src={contact?.profilePic} alt={`Profile of ${contact?.firstName}${contact?.lastName}.`}/>
-            </div>
-            <div>
+        <Container>
+            <Row>
+                <Image src={contact?.profilePic} rounded alt={`Profile of ${contact?.firstName}${contact?.lastName}.`}/>
+            </Row>
+            <Row>
                 <p>{contact?.firstName} {contact?.lastName}</p>
                 <dl>
                     <dt>Phone Number</dt>
@@ -16,8 +18,8 @@ const  ContactDetailsCard = ({ contact }) => {
                     <dt>Address</dt>
                     <dd>{contact?.address}</dd>
                 </dl>
-            </div>
-        </div>
+            </Row>
+        </Container>
     )
 }
 
