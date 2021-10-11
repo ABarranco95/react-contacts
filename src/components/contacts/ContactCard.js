@@ -21,4 +21,4 @@ const ContactCard = ({ firstName='', lastName='', phoneNumber='', profilePic='' 
     )
 }
 
-export default ContactCard;
+export default ContactCard

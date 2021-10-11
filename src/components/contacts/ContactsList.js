@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 
 const ContactList = ({ contacts=[] }) => {
     return (
-        <Container>
+        <Container className='card-container'>
             {contacts.map((contact) => 
                 <ContactCard 
                     key={contact.id}
