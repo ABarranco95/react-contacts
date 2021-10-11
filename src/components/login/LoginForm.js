@@ -1,31 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class LoginForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: '',
-            password: '',
-        };
+const LoginForm = () =>  {
 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    }
+        const [username, setUsername] = useState('')
+        const [password, setPassword] = useState('')
+            
 
-    handleInputChange(event) {
+    const handleInputChange = (e) => {
         this.setState({
-            [event.target.name]: event.target.value
+            [e.target.name]: e.target.value
         });
     }
 
-    handleFormSubmit(event) {
-        event.preventDefault();
-        
+    const handleFormSubmit = (e) => {
+        e.preventDefault(); 
     }
 
-    render() {
         return (
-            <form onSubmit={this.handleFormSubmit}>
+            <form onSubmit={handleFormSubmit}>
                 <div>
                     <label htmlFor="username">Username</label>
                     <input 
@@ -33,8 +25,8 @@ class LoginForm extends React.Component {
                         name="username"
                         type="text" 
                         placeholder="Username"  
-                        value={this.state.username}
-                        onChange={this.handleInputChange}
+                        value={username}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div>
@@ -44,8 +36,8 @@ class LoginForm extends React.Component {
                         name="password"
                         type="password" 
                         placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
+                        value={password}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div>
@@ -53,7 +45,6 @@ class LoginForm extends React.Component {
                 </div>
             </form>
         )
-    }
 }
 
 export default LoginForm;
